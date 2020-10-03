@@ -21,7 +21,7 @@ const chainMaker = {
       || position > this.chain.length
       ) {
           this.chain = [];
-          throw new Error ;
+          throw new Error('Error') ;
       }
         
     this.chain.splice(position-1, 1);

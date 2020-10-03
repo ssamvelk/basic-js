@@ -2,16 +2,16 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
 
-  if (!Array.isArray(arr)) throw new Error;
+  if (!Array.isArray(arr)) throw new Error('Error');
  
   const transformed = [];
   
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] === '--discard-next') {
       if (arr[i + 2] === '--double-prev' || arr[i + 2] === '--discard-prev') {
-        i++;
+        i += 1;
       }
-      i++;
+      i += 1;
     } else if (arr[i] === '--discard-prev') {
       if (i !== 0) {
         transformed.pop();

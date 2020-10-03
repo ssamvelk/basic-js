@@ -15,7 +15,7 @@ class VigenereCipheringMachine {
   decrypt(message, key) {
     const m = message;
     const k = key;
-    return this.VigenereChiperHandler(m, k, true)
+    return this.VigenereChiperHandler(m, k, true);
   }
 
   VigenereChiperHandler(message, key, isDecode) {

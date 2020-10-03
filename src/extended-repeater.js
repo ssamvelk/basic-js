@@ -7,10 +7,9 @@ module.exports = function repeater(str, options) {
   const {
     repeatTimes = 1,
     separator = '+',
-    
     additionRepeatTimes = 1,
     additionSeparator = '|'
-  } = options
+  } = options;
   
   let answer = [];
 
@@ -18,13 +17,13 @@ module.exports = function repeater(str, options) {
     answer.push(_str);
     
     for( let j = 0; j < additionRepeatTimes; j += 1) {
-      answer.push(addition)
-      if (j !== additionRepeatTimes - 1) answer.push(additionSeparator)
+      answer.push(addition);
+      if (j !== additionRepeatTimes - 1) answer.push(additionSeparator);
     }
 
-    if (i !== repeatTimes - 1) answer.push(separator)
+    if (i !== repeatTimes - 1) answer.push(separator);
   }
 
- return answer.join('')
+ return answer.join('');
 };
   
